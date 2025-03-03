@@ -1,25 +1,3 @@
-// // https://nuxt.com/docs/api/configuration/nuxt-config
-// export default defineNuxtConfig({
-//   // compatibilityDate: '2024-11-01',
-//   // devtools: { enabled: true },
-//   modules: ['@nuxtjs/tailwindcss'],
-//   css: ['~/assets/css/tailwind.css'],
-// })
-
-
-// nuxt.config.js
-
-// export default defineNuxtConfig({
-//   ssr: true,
-//   modules: ['@nuxtjs/tailwindcss'],
-
-//   // Make sure this path is correct
-//   css: ['@/assets/css/tailwind.css'],
-
-//   compatibilityDate: '2025-03-03'
-// })
-
-// nuxt.config.ts
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
 
@@ -43,6 +21,14 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  plugins: ['~/plugins/router.js'], // Register the router plugin
+
+  colorMode: {
+    preference: 'light', // Default to light mode
+    fallback: 'light', // Fallback in case of invalid settings
+    classSuffix: '', // No suffix for class names (can be 'light' or 'dark')
   },
 
   compatibilityDate: '2025-03-03',
