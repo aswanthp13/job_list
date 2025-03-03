@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build files
+.output/
+dist/
+
+# Environment variables
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore package-lock.json
+package-lock.json
+
+# Ignore Nuxt build directory
+.nuxt/
